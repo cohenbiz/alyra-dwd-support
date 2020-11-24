@@ -10,7 +10,7 @@ Il coexiste avec deux autres technologies Web :
 - **CSS** pour décrire la présentation visuelle
 - **JavaScript** pour des fonctionnalités interactives
 
-HTML utilise des **balises** (en anglais *tags*) qui sont insérées au sein d'un texte. Par exemple, chaque paragraphe est encadré par une balise paragraphe (`p`). Le titre principale sera encadré par la balise `h1`. L'ensemble, le titre + les paragraphes autour d'un sujet seront encadré par une balise `article`.
+HTML utilise des **balises** (en anglais *tags*) qui sont insérées au sein d'un texte. Par exemple, chaque paragraphe est encadré par une balise paragraphe (`p`). Le titre principal sera encadré par la balise `h1`. L'ensemble, le titre + les paragraphes autour d'un sujet seront encadrés par une balise `article`.
 
 
 ![](https://wptemplates.pehaa.com/assets/alyra/text-pandaroux.png)
@@ -26,7 +26,7 @@ https://codepen.io/alyra/pen/bGeywNy
 J'aime comparer la structure HTML d'un document web à un rangement Ikea. Les balises sont des placards, des étagères, des tiroirs, des boîtes, des cintres... 
 - Chaque élément à son usage spécifique (comme une balise a son sens sémantique). Nous n'accrochons pas des chaussettes sur les cintres et nous ne mettons pas des costumes dans les tiroirs.
 - Les éléments sont emboîtés l'un dans l'autre - mais pas tout à fait librement - par exemple, nous ne mettons pas de cintres dans les tiroirs. Pareil, dans HTML nous n'encadrons pas un titre par un paragraphe.
-- Les éléments du même type peuvent avoir leurs spécificité (par exemple un tiroir magnétique). Nous pouvons aussi leur donner des étiquettes (accrocher un autocollant chaussettes 🧦 sur un tiroir, marqués certains placards "hiver", etc.)
+- Les éléments du même type peuvent avoir leurs spécificités (par exemple un tiroir magnétique). Nous pouvons aussi leur donner des étiquettes (accrocher un autocollant chaussettes 🧦 sur un tiroir, marqués certains placards "hiver", etc.)
 
 ## Anatomie d'un élément HTML
 
@@ -36,8 +36,8 @@ J'aime comparer la structure HTML d'un document web à un rangement Ikea. Les ba
 
 ![](https://wptemplates.pehaa.com/assets/alyra/balises-html1.png)
 
-Éléments HTML peuvent aussi avoir des attributs (caractéristiques et étiquettes).  
-L'ordre dans lequel nous listons des attributs n'a pas d'importance. Les valeurs devrait être encadrées par des guillemets (`""`).
+Les éléments HTML peuvent aussi avoir des attributs (caractéristiques et étiquettes).  
+L'ordre dans lequel nous listons des attributs n'a pas d'importance. Les valeurs devraient être encadrées par des guillemets (`""`).
 
 ```html
 <nomdebalise attribut1="sa valeur" attribut2="sa valeur">contenu de l'élément</nomdebalise>
@@ -45,7 +45,7 @@ L'ordre dans lequel nous listons des attributs n'a pas d'importance. Les valeurs
 
 ![](https://wptemplates.pehaa.com/assets/alyra/balises-html2.png)
 
-Il existe aussi des éléments qui n'ont pas de contenu, des éléments vides. Dans ce cas-là, nous allons utiliser des balises *auto-fermantes* (en anglais *self-closing tags*).  
+Il existe aussi des éléments qui n'ont pas de contenu, des éléments vides. Dans ce cas-là, nous allons utiliser des balises *autofermantes* (en anglais *self-closing tags*).  
 Les exemples les plus simples des éléments vides sont :
 - `<br />` - saut à la ligne (`<br>` est aussi correcte),
 - `<hr />` - la ligne horizontale (`<hr>` est aussi correcte),
@@ -102,12 +102,12 @@ https://codepen.io/alyra/pen/zYBQoWe
 </html>
 ```
 
-Revenons à notre métaphore "rangement Ikea". Le `body` du document html correspond au rangement lui-même. Mais seront nous capable de l'assembler sans sa notice (partie `head` du document html) ?
+Revenons à notre métaphore "rangement Ikea". Le `body` du document html correspond au rangement lui-même. Mais serons-nous capables de l'assembler sans sa notice (partie `head` du document html) ?
 
-L'élément HTML `<head>` fournit des informations générales (métadonnées) sur le document. Les plus important sont :
+L'élément HTML `<head>` fournis des informations générales (métadonnées) sur le document. Les plus importants sont :
 - le titre du document
 - liens ou des définitions vers des scripts et feuilles de style
-- le jeux de caractères utilisé
+- le jeu de caractères utilisé
 
 
 
@@ -117,7 +117,7 @@ L'élément HTML `<head>` fournit des informations générales (métadonnées) s
 
 Ci-dessous vous trouverez les principales balises HTML **classées par le contexte d'utilisation.**
 
-Attention: Cette liste n'est pas 100% complète. Dans un objectif de clarté, certaines balises rarement utilisées, obsoletes ou "expérimentales" ne sont pas inclues. Vous pouvez en lire davantage dans la ["Référence des éléments HTML"](https://developer.mozilla.org/fr/docs/Web/HTML/Element)
+Attention: Cette liste n'est pas 100% complète. Dans un objectif de clarté, certaines balises rarement utilisées, obsolètes ou "expérimentales" ne sont pas incluses. Vous pouvez en lire davantage dans la ["Référence des éléments HTML"](https://developer.mozilla.org/fr/docs/Web/HTML/Element)
 
 ### Racine principale (root)
 
@@ -179,7 +179,7 @@ Attention: Cette liste n'est pas 100% complète. Dans un objectif de clarté, ce
 
 ### Images, Multimedia et Embedded Content
 
-**Objectif** : afficher les images et multimedia, intégrer le contenu _externe_
+**Objectif** : afficher les images et multimédias, intégrer le contenu _externe_
 
 `img`  
 `picture`  
@@ -191,7 +191,7 @@ Attention: Cette liste n'est pas 100% complète. Dans un objectif de clarté, ce
 
 ### Scripts
 
-**Objectif** : Gérer l'execution des scripts
+**Objectif** : Gérer l'exécution des scripts
 
 `canvas`  
 `script` et `noscript`
@@ -234,7 +234,7 @@ Vous pouvez voir le code ci-dessus en action en cliquant [ce lien](https://cdpn.
 
 `details` + `summary`
 
-### Éléments obsoletes ⚠️
+### Éléments obsolètes ⚠️
 
 **Attention** - évitez à les utiliser
 
@@ -272,18 +272,18 @@ Vous pouvez voir le code ci-dessus en action en cliquant [ce lien](https://cdpn.
 
 ## Catégories de contenu
 
-Chaque élément HTML est membre d'un certain nombre de catégories de contenu (par exemple _phrasing content_ ou _interactive content_). Il existe plusieurs règles qui sont basés sur ce classement. En particulier, certain éléments peuvent contenir uniquement des éléments appartenant à la classe *contenu phrasé*. 
+Chaque élément HTML est membre d'un certain nombre de catégories de contenu (par exemple _phrasing content_ ou _interactive content_). Il existe plusieurs règles qui sont basées sur ce classement. En particulier, certains éléments peuvent contenir uniquement des éléments appartenant à la classe *contenu phrasé*. 
 
 ### Phrasing content (contenu phrasé)
 
 `a` (s'il contient lui-même _phrasing content_)  
  `abbr` `audio` `b` `bdo` `br` `button` `canvas` `cite` `code` `command` `data` `datalist` `dfn` `em` `embed` `i` `iframe` `img` `input` `kbd` `keygen` `label` `mark` `math` `meter` `noscript` `object` `output` `picture` `progress` `q` `ruby` `samp` `script` `select` `small` `span` `strong` `sub` `sup` `svg` `textarea` `time` `var` `video` `wbr` et texte.
 
-Une des balise que nous utilisons particulierement souvent est `p` (paragraphe). Il est important de savoir que pour un paragraphe le seul contenu autorisé est contenu phrasé.
+Une des balises que nous utilisons particulièrement souvent est `p` (paragraphe). Il est important de savoir que pour un paragraphe le seul contenu autorisé est contenu phrasé.
 
 ```html
 <!-- ceci est correct (et vrai) -->
-<p>Ca se complique, hein ? Ne vous inquiétez pas, on va continuer doucement en veillant que vous appreniez de bonnes pratiques.</p>
+<p>Ça se complique, hein ? Ne vous inquiétez pas, on va continuer doucement en veillant que vous appreniez de bonnes pratiques.</p>
 
 <!-- ceci n'est pas correct (et faux) -->
 <p><div>Pfff, c'est trop compliqué.</div></p>
@@ -295,7 +295,7 @@ https://codepen.io/alyra/pen/QWjJzRB
 
 **Comment savoir ?**
 
-- Suivre la spécifation - [MDN - Référence des éléments HTML](https://developer.mozilla.org/fr/docs/Web/HTML/Element)
+- Suivre la spécification - [MDN - Référence des éléments HTML](https://developer.mozilla.org/fr/docs/Web/HTML/Element)
 - [Veiller à toujours valider son document HTML](https://validator.w3.org/)
 
 ### Ressources
