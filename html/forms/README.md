@@ -1,15 +1,15 @@
 # Formulaires <span role="img" aria-label="">📩<span>
 
 Formulaires permettent aux utilisateurs d'interagir avec un site web ou une application. Les formulaires que nous utilisons le plus souvent sont :
-- un champs de recherche au sein d'un site web 🔎
+- un champ de recherche au sein d'un site web 🔎
 - formulaire de contact sur un site web 📩
-- formulaire que nous remplissons afin d'effectuer un achat en-ligne 🛒
+- formulaire que nous remplissons afin d'effectuer un achat en ligne 🛒
 
-HTML fournit différents éléments permettant de créer des formulaires. Nous allons apprendre comment mettre en place des contrôles interactifs (les champs qui permettent aux utilisateurs d'envoyer des données). Ce qui se passe ensuite avec ces données, ne nous concerne pas pour l'instant.
+HTML fournit différents éléments permettant de créer des formulaires. Nous allons apprendre comment mettre en place des contrôles interactifs (les champs qui permettent aux utilisateurs d'envoyer des données). Ce qui se passe ensuite avec ces données ne nous concerne pas pour l'instant.
 
 ## <code>form</code>
 
-Notre aventure commence avec l'élément `<form>`. `<form>` représente une section qui regroupe les élément interactifs.
+Notre aventure commence avec l'élément `<form>`. `<form>` représente une section qui regroupe les éléments interactifs.
 
 ```html
 <form action="/ou/envoyer/" method="POST">
@@ -18,14 +18,14 @@ Notre aventure commence avec l'élément `<form>`. `<form>` représente une sect
 
 Je mentionne ici très brièvement les attributs `action` et `method` :
 
-- `action` - L'URL vers le script qui traitera les données envoyées par le formulaire. Nous serons redirigé vers cette adresse. Si `action` n'est pas spécifié, les données sont envoyées à l'URL de la page contenant le formulaire.
-- `method` - comment les données sont envoyées. Dans la majorité des cas les formulaires utilisent la méthode `GET` (méthode par défaut) ou `POST`. Avec la méthode GET les données sont envoyées via l'URL.  Avec la méthode POST les données sont envoyées dans le body de la requête.
+- `action` - L'URL vers le script qui traitera les données envoyées par le formulaire. Nous serons redirigés vers cette adresse. Si `action` n'est pas spécifié, les données sont envoyées à l'URL de la page contenant le formulaire.
+- `method` - comment les données sont envoyées. Dans la majorité des cas, les formulaires utilisent la méthode `GET` (méthode par défaut) ou `POST`. Avec la méthode GET les données sont envoyées via l'URL.  Avec la méthode POST les données sont envoyées dans le body de la requête.
 
 Vous pouvez [en lire davantage ici (MDN).](https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_donn%C3%A9es_des_formulaires)
 
 ### <code>fieldset + legend</code>
 
-`<fieldset>`permet de sectionner le formulaire en  regroupant plusieurs contrôles interactifs. Il est particulièrement utile dans le cas de formulaires complexes ou nous devons récupérer plusieurs type de données (par exemple : personnelles, expérience, mode de contact, etc.)
+`<fieldset>`permet de sectionner le formulaire en  regroupant plusieurs contrôles interactifs. Il est particulièrement utile dans le cas de formulaires complexes ou nous devons récupérer plusieurs types de données (par exemple : personnelles, expérience, mode de contact, etc.)
 
 ```html
 <form>
@@ -48,15 +48,15 @@ Vous pouvez [en lire davantage ici (MDN).](https://developer.mozilla.org/fr/docs
 
 ## Contrôle interactif - <code>input</code>
 
-L'élément vide `<input>` crée un contrôle interactif. Les saisies possibles et son comportement dépend fortement de la valeur indiquée par son attribut `type`.
+L'élément vide `<input>` crée un contrôle interactif. Les saisies possibles et son comportement dépendent fortement de la valeur indiquée par son attribut `type`.
 
 ```html
 <input type="email" id="email" name="email" required />
 ```
 
-Regardons les attributs souvent utilisé avec `input`
+Regardons les attributs souvent utilisés avec `input`
 
-- `type` - par défaut text. Comme vous pouvez l'observer dans la video ci-dessous, le comportement de l'élément `<input>` change grandement en fonction de son attribut `type`.   
+- `type` - par défaut text. Comme vous pouvez l'observer dans la vidéo ci-dessous, le comportement de l'élément `<input>` change grandement en fonction de son attribut `type`.   
 Vous trouverez la liste des types disponibles avec des exemples [ici (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
 
 https://wptemplates.pehaa.com/assets/alyra/input-type.mp4
@@ -160,10 +160,10 @@ L'attribut `checked` indique la valeur choisie par défaut.
 
 ### <code>input</code> type checkbox
 
-Le élément `<input type=checkbox>` permet de cocher une (ou plusieurs) valeurs.
+L’élément `<input type=checkbox>` permet de cocher une (ou plusieurs) valeur.
 
 ```html
-<label for="satisfaction">Cochez si ca vous a plus</label>
+<label for="satisfaction">Cochez si ça vous a plus</label>
 <input id="satisfaction" name="satisfaction" type="checkbox">
 ```
 
@@ -179,7 +179,7 @@ Le élément `<input type=checkbox>` permet de cocher une (ou plusieurs) valeurs
 </fieldset>
 ```
 
-- `textarea` n'est pas un element vide. Pour prévoir un contenu par défaut, il faut l'ajouter entre les balises de l'élément (l'attribut `value` n'est pas pris en charge).
+- `textarea` n'est pas un élément vide. Pour prévoir un contenu par défaut, il faut l'ajouter entre les balises de l'élément (l'attribut `value` n'est pas pris en charge).
 - Les attributs `rows` et `cols` permettent de définir la taille de l'élément.
 
 ### <code>select</code>
@@ -211,3 +211,4 @@ https://codepen.io/alyra/pen/qBOzGRo
 
 - [Monstre](https://codepen.io/alyra/pen/LYpJrwg) | [solution](https://codepen.io/alyra/pen/6476cabbc1a5a1849f5bb349a4fa4ea0)
 - [Form - Dev Freelance](https://codepen.io/alyra/pen/pojOZoP) | [solution](https://codepen.io/alyra/pen/6614f36dcfcc8ae7045f250135dc77e8)
+
