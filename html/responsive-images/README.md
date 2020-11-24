@@ -2,8 +2,8 @@
 
 ## attribut `srcset`
 
-Avez-vous un apareil avec l'écran "haute définition" ? Votre smartphone par exemple ?
-Si oui, vous avex peut-être déjà remarqué que parfois, certaines images [(souvent des logos) s'affichent de la façon un peu "floue"...](https://cdpn.io/alyra/debug/vYNPMvw)
+Avez-vous un appareil avec l'écran "haute définition" ? Votre smartphone par exemple ?
+Si oui, vous avez peut-être déjà remarqué que parfois, certaines images [(souvent des logos) s'affichent de la façon un peu "floue"...](https://cdpn.io/alyra/debug/vYNPMvw)
 
 Regardons le code, ci-dessous,
 
@@ -11,7 +11,7 @@ Regardons le code, ci-dessous,
 <img src="img-300x400.jpg" width="300" alt="texte alternatif" />
 ```
 
-Sur des écrans haute définition, l'image ci-dessus, va être affichée sur la grille de pixels qui fait 600 points lumineux sur 800 points lumineux (écrans 2x) ou même 900 x 1200 (écrans 3x). C'est comme si on imprimait une image de 10cm sur 10cm sur une feuille 20cm sur 20cm. C'est souvent pas beau du tout...
+Sur des écrans haute définition, l'image ci-dessus, va être affichée sur la grille de pixels qui fait 600 points lumineux sur 800 points lumineux (écrans 2x) ou même 900 x 1200 (écrans 3x). C'est comme si on imprimait une image de 10cm sur 10cm sur une feuille 20cm sur 20cm. Ce n'est souvent pas beau du tout...
 
 Regardons comment on peut y remédier ?
 
@@ -27,7 +27,7 @@ Première étape est de préparer une autre image, de la taille `600px x 800px` 
 />
 ```
 
-Nous pouvons aller encore plus loin. Si nous avons la possibilité d'avoir notre image dans la resolution `900px x 1200px`, utilisons aussi cette variante (img-900-1200.jpg) :
+Nous pouvons aller encore plus loin. Si nous avons la possibilité d'avoir notre image dans la résolution `900px x 1200px`, utilisons aussi cette variante (img-900-1200.jpg) :
 
 ```html
 <img
@@ -71,7 +71,7 @@ Ceci veut dire, si la taille de l'écran ne dépasse pas `600px`, l'image prend 
 
 ### 🤔 Solution 3 : format `SVG`
 
-`SVG` (Scalable Vector Graphics) est un format vectoriel. Ceci dit, que cette solution ne s'appliquera pas aux photos. Par contre, elle est <b>parfaite 😍</b> pour les logos, pictos, illustrations. Un SVG ne perdra rien de sa qualité peu importe la taille. On est souvent gagnants en ce qui concerne le poids d'images (en B) et regardez, on revient au markup tout simple :
+`SVG` (Scalable Vector Graphics) est un format vectoriel. Ceci dit, que cette solution ne s'appliquera pas aux photos. Par contre, elle est <b>parfaite 😍</b> pour les logos, pictos, illustrations. Un SVG ne perdra rien de sa qualité, peu importe la taille. On est souvent gagnants en ce qui concerne le poids d'images (en B) et regardez, on revient au markup tout simple :
 
 ```html
 <img src="img.svg" width="300" alt="texte alternatif" />
@@ -79,7 +79,7 @@ Ceci veut dire, si la taille de l'écran ne dépasse pas `600px`, l'image prend 
 
 ## `<picture>` - HTML tag
 
-Il arrive parfois (rarement, mais ça peut arriver) qu'on veut afficher des images différentes selon la taille de l'écran. Est-ce possible, uniquement avec HTML ? Oui !!!
+Il arrive parfois (rarement, mais ça peut arriver) qu'on veuille afficher des images différentes selon la taille de l'écran. Est-ce possible, uniquement avec HTML ? Oui !!!
 
 ```html
 <picture>
