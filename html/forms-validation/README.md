@@ -1,32 +1,32 @@
 # Validation des Formulaires <span role="img" aria-label="">✅</span>
 
-C'est le rôle de développeur front-end d'assurer que le format correbt des données soumises par un utilisateur via un formulaire. Nous parlons ici de la validation côté-client (_client-side validation_). La validation _client-side_ s'ajoute à la validation côté serveur (_server-side validation_). Elle n'est pas pourtant moins importante et ne devrait pas être négligée. Un des avantages est le feedback instantané envoyé à l'utilisateur sur ses saisies. C'est absolument nécessaire dans le contexte de bonne expérience utilisateur.
+C'est le rôle de développeur front-end d'assurer que le format correbt des données soumises par un utilisateur via un formulaire. Nous parlons ici de la validation côté client (_client-side validation_). La validation _client-side_ s'ajoute à la validation côté serveur (_server-side validation_). Elle n'est pas pourtant moins importante et ne devrait pas être négligée. Un des avantages est le feedback instantané envoyé à l'utilisateur sur ses saisies. C'est absolument nécessaire dans le contexte de bonne expérience utilisateur.
 
-Avec l'arrivée de _HTML5_ nous avons la validation _"nativement"_ disponible dans le navigateur 🎉. Nous pouvons spécifier le format souhaité grâce aux attributs HTML. L'élément `form` bloquera l'envoie des données si les formats ne sont pas respectés.
+Avec l'arrivée de _HTML5_ nous avons la validation _"nativement"_ disponible dans le navigateur 🎉. Nous pouvons spécifier le format souhaité grâce aux attributs HTML. L'élément `form` bloquera l'envoi des données si les formats ne sont pas respectés.
 
 ## L'utilisation de la validation "native"
 
 Nous avons à notre disposition :
 
-- **l'attribut `type` pour les contrôles `input`** qui impose le format (par exemple `<input type="email">` impose le format d'addresse mail correcte)
+- **l'attribut `type` pour les contrôles `input`** qui impose le format (par exemple `<input type="email">` impose le format d'adresse mail correcte)
 
 ```html
 <label for="mail">Votre adresse e-mail</label>
 <input id="mail" name="mail" type="email" placeholder="ex. mr@alyra.fr">
 ```
 
-- **l'attribut `required`** qui indique que le champs doit être rempli
+- **l'attribut `required`** qui indique que le champ doit être rempli
 
 ```html
 <label for="mail">Votre adresse e-mail</label>
 <input id="mail" name="mail" type="email" placeholder="ex. mr@alyra.fr" required>
 ```
 
-- **les attributs `minlength` et `maxlength`** qui donnent des contraintes à la longeur des entrées textuelles
+- **les attributs `minlength` et `maxlength`** qui donnent des contraintes à la longueur des entrées textuelles
 
 ```html
 <label for="slug">Choisissez votre identifiant (entre 3 et 8 caractères)</label>
-<input id="slug" name="slug" type="text" placeholder="ex. alyra" minlength="3" maxlenght="8">
+<input id="slug" name="slug" type="text" placeholder="ex. Alyra" minlength="3" maxlenght="8">
 ```
 
 - **les attributs `min` et `max`** pour les entrées numériques
@@ -38,17 +38,17 @@ Nous avons à notre disposition :
 
 - **l'attribut `pattern`** qui permet d'imposer un format en particulier. Nous pouvons utiliser cet attribut avec des contrôles `input` de type `text`, `tel`, `email`, `url`, `password`, et `search`.
 
-Ici nous voulons récupérer un e-mail alyra. Il est toujours en format `prenom@alyra.fr`
+Ici nous voulons récupérer un e-mail Alyra. Il est toujours en format `prenom@alyra.fr`
 
 ```html
-<label for="mail">Votre adresse e-mail chez alyra (uniquement les membres d'Alyra)</label>
+<label for="mail">Votre adresse e-mail chez Alyra (uniquement les membres d'Alyra)</label>
 <input id="mail" name="mail" type="email" placeholder="ex. mr@alyra.fr" pattern="[a-z]{2,}@alyra.fr">
 ```
 
 
 ```html
-<label for="slug">Choisissez votre identifiant (entre 3 et 8 lettres en miniscule)</label>
-<input id="slug" name="slug" type="text" placeholder="ex. alyra" pattern="[a-z]{3,8}">
+<label for="slug">Choisissez votre identifiant (entre 3 et 8 lettres en minuscule)</label>
+<input id="slug" name="slug" type="text" placeholder="ex. Alyra" pattern="[a-z]{3,8}">
 ```
 
 ```html
@@ -72,7 +72,7 @@ ou
 
 ## *Client-side* validation avec JavaScript
 
-Parfois les dévéloppeurs préfèrent de ne pas utiliser la validation "native". Il est important de savoir comment la désactiver. Nous ajoutons pour cela l'attribut  `novalidate` à l'élément `form`.
+Parfois les développeurs préfèrent de ne pas utiliser la validation "native". Il est important de savoir comment la désactiver. Nous ajoutons pour cela l'attribut  `novalidate` à l'élément `form`.
 
 ```html
 <form novalidate>
@@ -85,3 +85,4 @@ Parfois les dévéloppeurs préfèrent de ne pas utiliser la validation "native"
 ## Exercices
 
  - [Form Validation with pattern attribute](https://codepen.io/alyra/pen/gOadKZN) | [solution](https://codepen.io/alyra/pen/3fa833dd9bce32de45f7635b63e8aefd)
+
