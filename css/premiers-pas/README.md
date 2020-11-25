@@ -4,7 +4,11 @@ CSS vient de *Cascading Style Sheets*, ce qui se traduit en français par « feu
 
 Est-ce CSS un langage de programmation ? Pas tout à fait, c'est plutôt un langage de feuille de style. Il permet de communiquer avec le navigateur en indiquant l'aspect visuel d'un élément HTML.
 
-CSS permet de passer le message: "Hey navigateur, affiche des paragraphes en rouge, et aussi pour chaque paragraphe, espace des lettres davantage, disant de 2px". Ici on communique sur les propriétés: couleur - `color` et espacement des lettres - `letter-spacing`, mais aussi on arrive a indiquer sur quels éléments ces propriétés doivent être appliquées. CSS est alors lié au HTML.
+CSS permet de passer le message: 
+
+> "Hey navigateur, affiche des paragraphes en rouge, et aussi pour chaque paragraphe, espace des lettres davantage, disant de 2px". 
+
+Ici on communique sur les propriétés: couleur - `color` et espacement des lettres - `letter-spacing`, mais aussi on indique sur quels éléments ces propriétés doivent être appliquées. CSS est alors lié très etraitement au HTML.
 
 On vient aussi de parler des "pixels" - avec CSS nous allons apprendre à utiliser des unités adaptés aux écrans, nous allons utiliser des `px` (pixels), ainsi que des `rem` et `em` (basée sur des pixels). Nous allons aussi utiliser des `vh` et `vw` (basée sur la largeur de la fenêtre dans le navigateur) et le pourcentage `%`.
 
