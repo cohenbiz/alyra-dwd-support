@@ -145,7 +145,8 @@ https://cdpn.io/alyra/debug/NWRKLWy
 
 En CSS, il existe deux type de boîtes : les boîtes de type `block` et les boîtes en ligne (`inline`).
 
-Un élément de type 'block'  :
+**Un élément de type `block`  :**
+
 - veut remplir toute l'espace disponible  son conteneur
 - crée un retour à la ligne, éléments suivants passent à la ligne
 - respecte les propriétés `width` et `height`, 
@@ -153,7 +154,7 @@ Un élément de type 'block'  :
 
 `p, div, h1-h6, section, ...` la majorité des éléments est type `block`
 
-Un élément de type `inline` :
+**Un élément de type `inline` :**
 
 - ne crée pas de retour à la ligne, les autres éléments se suivent en ligne,
 - `width` et `height` ne s'appliquent pas
@@ -167,8 +168,10 @@ https://codepen.io/alyra/pen/YzwKodK
 
 ### Collapsing margins (marges fusionnées)
 
-Les marges top et bottom des blocs sont parfois fusionnées en une seule marge.  
-La taille de la marge = la plus grande des deux marges fusionnées. C'est ce qu'on appelle _collapsing margins._
+Les marges verticales (`margin-top` et `margin-bottom`) des éléments type `block` sont parfois fusionnées en une seule marge.  C'est ce qu'on appelle _collapsing margins._
+Le règle qui s'y applique est suivante :
+
+La taille de la marge = la plus grande des deux marges fusionnées. 
 
 Ceci concerne les situations suivantes:
 
