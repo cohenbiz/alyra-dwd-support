@@ -82,6 +82,59 @@ div {
 
 A l'occasion nous allons parler aussi de la propriété `margin` - la taille des marges sur les quatre côtés de l'élément, un raccourci pour `margin-top`, `margin-right`, `margin-bottom` et` margin-left`.
 
+```css
+div {
+/* top, right, bottom et left à 16px */
+  margin: 16px;
+/*
+  margin-top: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  margin-left: 16px;
+ */
+}
+```
+
+```css
+div {
+/* top et bottom (↕️) à 16px et right et left (↔️) à 24px */
+  margin: 16px 24px;
+/*
+  margin-top: 16px;
+  margin-right: 24px;
+  margin-bottom: 16px;
+  margin-left: 24px;
+*/
+  
+}
+```
+
+```css
+div {
+  /* top à 16px et right et left (↔️) à 24px, bottom à 32px  */
+  margin: 16px 24px 32px;
+/*
+  margin-top: 16px;
+  margin-right: 24px;
+  margin-bottom: 32px;
+  margin-left: 24px;
+*/
+}
+```
+
+```css
+div {
+/* top à 16px et right à 24px, bottom à 32px et left à 48px 👆👉👇👈 */
+  margin: 16px 24px 32px 48px;
+/*
+  margin-top: 16px;
+  margin-right: 24px;
+  margin-bottom: 32px;
+  margin-left: 48px;
+*/
+}
+```
+
 Il est important de comprendre la différence entre `margin` et `padding`
 
 https://cdpn.io/alyra/debug/NWRKLWy
@@ -94,58 +147,6 @@ https://cdpn.io/alyra/debug/NWRKLWy
 Le comportement d'un élément peut être modifier avec la propriété `display`
 
 https://codepen.io/alyra/pen/YzwKodK
-
-### margin & padding syntax
-
-```css
-div {
-  padding: 20px;
-  /*
-  padding-top: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  */
-}
-```
-
-```css
-div {
-  padding: 20px 30px;
-  /*
-  padding-top: 20px;
-  padding-right: 30px;
-  padding-bottom: 20px;
-  padding-left: 30px;
-  */
-}
-```
-
-```css
-div {
-  padding: 20px 30px 40px;
-  /*
-  padding-top: 20px;
-  padding-right: 30px;
-  padding-bottom: 40px;
-  padding-left: 30px;
-  */
-}
-```
-
-```css
-div {
-  padding: 20px 30px 40px 50px;
-  /*
-  padding-top: 20px;
-  padding-right: 30px;
-  padding-bottom: 40px;
-  padding-left: 50px;
-  */
-}
-```
-
-https://codepen.io/alyra/pen/XWXWRXJ
 
 ### Collapsing margins (marges fusionnées)
 
