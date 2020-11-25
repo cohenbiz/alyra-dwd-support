@@ -12,7 +12,7 @@ Les trois propriétés :
 
 ```css
 p {
-  // top, right, bottom et left à 16px
+  /* top, right, bottom et left à 16px */
   padding: 16px;
 }
 ```
