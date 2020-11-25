@@ -1,8 +1,37 @@
 # Box Model 📦
 
-Propriétés qui définissent combien de place prend un élément :
+Du point de vue de CSS chaque élément est un box (boîte). Nous allons apprendre comment ces boîtes fonctionnent afin de pouvoir gérer leurs dimentions leur positionement au sein d'une page HTML.
 
-`width` `height` `padding` `border` `margin`
+## Dimensions
+
+Les trois propriétés :
+
+- `width` - la largeur de la boîte, par défaut, sa valeur est `auto`, en lire plus sur [MDN](https://developer.mozilla.org/fr/docs/Web/CSS/width)
+- `height`- la hauteur de la boîte, par défaut, sa valeur est `auto`, en lire plus sur [MDN](https://developer.mozilla.org/fr/docs/Web/CSS/height)
+- `padding` - raccourcie pour `padding-top` , `padding-right`, `padding-bottom` et `padding-left` - les espacements internes dans l'élément , en lire plus sur [MDN](https://developer.mozilla.org/fr/docs/Web/CSS/padding)
+
+```css
+p {
+  // top, right, bottom et left à 16px
+  padding: 16px;
+}
+```
+
+```css
+p {
+  // top et bottom () à 16px et right et left à 24px
+  padding: 16px 24px;
+}
+```
+
+- `border`
+
+agissent directement sur les dimensions d'un élément.
+
+A l'occasion nous allons parler aussi de la propriété `margin`.
+Il est important de comprendre la différence entre `margin` et `padding`
+
+https://cdpn.io/alyra/debug/NWRKLWy
 
 ### inline & block
 
