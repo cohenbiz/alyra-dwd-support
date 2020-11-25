@@ -1,10 +1,12 @@
 # CSS - Introduction
 
-CSS vient de Cascading Style Sheets, ce qui se traduit en français par ou « feuilles de style en cascade » (source MDN)
+CSS vient de *Cascading Style Sheets*, ce qui se traduit en français par « feuilles de style en cascade » ([source MDN](https://developer.mozilla.org/en-US/docs/Web/CSS))
 
 Est-ce CSS un langage de programmation ? Pas tout à fait, c'est plutôt un langage de feuille de style. Il permet de communiquer avec le navigateur en indiquant l'aspect visuel d'un élément HTML.
 
 CSS permet de passer le message: "Hey navigateur, affiche des paragraphes en rouge, et aussi pour chaque paragraphe, espace des lettres davantage, disant de 2px". Ici on communique sur les propriétés: couleur - `color` et espacement des lettres - `letter-spacing`, mais aussi on arrive a indiquer sur quels éléments ces propriétés doivent être appliquées. CSS est alors lié au HTML.
+
+On vient aussi de parler des "pixels" - avec CSS nous allons apprendre à utiliser des unités adaptés aux écrans, nous allons utiliser des `px` (pixels), ainsi que des `rem` et `em` (basée sur des pixels). Nous allons aussi utiliser des `vh` et `vw` (basée sur la largeur de la fenêtre dans le navigateur) et le pourcentage `%`.
 
 ## Syntaxe
 
@@ -27,7 +29,7 @@ Pour que les styles soient bien appliqués aux éléments dans le document HTML,
 
 Ceci peut être effectué à plusieurs façons :
 
-1. Les déclarations css sont écrits dans un fichier séparé. Ce fichier aura pour extention `.css`, par exemple `style.css`
+1. Les déclarations CSS sont écrits dans un fichier séparé. Ce fichier aura pour extention `.css`, par exemple `style.css`
 
 Afin que le document HTML puisse "lire" les styles, nous devons ajouter une balise dans la partie `head` du document, comme ci-dessous :
 
@@ -42,7 +44,7 @@ Afin que le document HTML puisse "lire" les styles, nous devons ajouter une bali
 </html>
 ```
 
-2. Les déclarations de styles peuvent être aussi inclues directement dans le `head` (sans passer par un fichier séparé). Dans ce cas là, on utilise les balises `<style>`
+2. Les déclarations de styles peuvent être aussi inclues directement dans la partie `head` (sans passer par un fichier séparé). Dans ce cas là, on utilise les balises `<style>` comme ci-dessous :
 
 ```html
 <!DOCTYPE html>
