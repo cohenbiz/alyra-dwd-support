@@ -139,12 +139,29 @@ Il est important de comprendre la différence entre `margin` et `padding`
 
 https://cdpn.io/alyra/debug/NWRKLWy
 
-### inline & block
+![""](https://wptemplates.pehaa.com/assets/alyra/margin-padding.png)
 
-`p, div, h1-h6, section, ...`, en fait la majorité des éléments est type `block`  
-`span, em, strong, i, b, ins, del ...` - ont le caractère en-ligne `inline`
+## Élément de type `inline`  vs. éléments de type `block`
 
-Le comportement d'un élément peut être modifier avec la propriété `display`
+En CSS, il existe deux type de boîtes : les boîtes de type `block` et les boîtes en ligne (`inline`).
+
+Un élément de type 'block'  :
+- veut remplir toute l'espace disponible  son conteneur
+- crée un retour à la ligne, éléments suivants passent à la ligne
+- respecte les propriétés `width` et `height`, 
+- `padding`, `margin` et `border` repoussent des éléments autour
+
+`p, div, h1-h6, section, ...` la majorité des éléments est type `block`
+
+Un élément de type `inline` :
+
+- ne crée pas de retour à la ligne, les autres éléments se suivent en ligne,
+- `width` et `height` ne s'appliquent pas
+- `padding`, `margin` et `border` sur l'axe verticale sont appliquées mais ne provoquent pas de déplacement des éléments autour.
+
+`a, span, em, strong, i, b, ins, del ...` - ont le caractère en-ligne `inline`
+
+Le comportement d'un élément peut être modifié avec la propriété `display`
 
 https://codepen.io/alyra/pen/YzwKodK
 
