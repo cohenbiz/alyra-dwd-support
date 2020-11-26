@@ -60,7 +60,7 @@ Vous pouvez en lire davantage dans [cet article sur smashingmagazine.](https://w
 
 ![""](https://wptemplates.pehaa.com/assets/alyra/rgbtohex.png)
 
-[Le fameux Quiz du Professeur Hervé B.\*](https://cdpn.io/alyra/debug/616e97467780239fc8927073fe284ec5)
+[![Le fameux Quiz du Professeur Hervé B.\*](https://wptemplates.pehaa.com/assets/alyra/quizz-rvb.png)](https://cdpn.io/alyra/debug/616e97467780239fc8927073fe284ec5)
 
 - **hsl, hsla** Teinte h (hue), Saturation s, Luminosité (l)  
   [HSL Color Picker par Marton Borbely](https://codepen.io/HunorMarton/full/dvXVvQ)
