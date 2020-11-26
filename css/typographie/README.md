@@ -88,7 +88,7 @@ La propriété `font-size` définit la taille de fonte utilisée pour le texte. 
 
 `px` - souvent utilisé, pourtant l'utilisation des pixels pour la taille de police n'est pas le meilleur choix, et nous allons abondonner cette approche. Utilisation de pixels ne permet pas aux navigateurs d'appliquer des réglages utilisateur concernant la taille des polices - ceci est illustré dans la video co-dessous.
   
-  https://wptemplates.pehaa.com/assets/alyra/px-vs-rem-em.mp4
+https://wptemplates.pehaa.com/assets/alyra/px-vs-rem-em.mp4
  
 ### `em`
 
