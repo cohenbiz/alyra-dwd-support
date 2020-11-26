@@ -70,7 +70,7 @@ header p {
 
 Dans chaque de cas, si aucune police oblique n'est disponible, le navigateur synthétisera une police penchée en tournant les caractères d'une fonte normale.
 
-## font-size
+## `font-size`
 
 La propriété `font-size` définit la taille de fonte utilisée pour le texte. La propriété font-size peut être définie de deux façons :
 
@@ -84,10 +84,29 @@ La propriété `font-size` définit la taille de fonte utilisée pour le texte. 
   ```
 - (très souvent) comme une valeur de type <length>
   
-  `px` - souvent utilisé. Pourtant l'utilisation des pixels pour la taille de police n'est pas le meilleur choix, et nous allons abondonner cette approche. Utilisation de pixels ne permet pas aux navigateurs d'appliquer des réglages utilisateur concernant la taille des polices.
+  `px` - souvent utilisé, pourtant l'utilisation des pixels pour la taille de police n'est pas le meilleur choix, et nous allons abondonner cette approche. Utilisation de pixels ne permet pas aux navigateurs d'appliquer des réglages utilisateur concernant la taille des polices.
   
-
-
+  https://wptemplates.pehaa.com/assets/alyra/px-vs-rem-em.mp4
+ 
+ - `em` - la taille d'une valeur exprimée en `em` est dynamique. `1em` est équivalent à la taille de fonte appliquée à l'élément parent de l'élément courant. Si cette taille n'a pas été définie pour l'élément parent, elle correspondra à la taille par défaut du navigateur (généralement 16px).
+  
+  ```css
+  h2 {
+    font-size: 2em;
+    /* 2 * 16px = 32px */
+  }
+  h2 span {
+    font-size: 0.75em;
+    /* 0.75 * 32px = 24px */
+  }
+  ```
+  
+  Le problème avec les unités `em` est qu'il faut toujours prend en compte la taille de police dans l'élement parent (la composition).
+  
+  https://codepen.io/alyra/pen/vYXYyRz
+  
+- `rem` - 🤩🥳 - l'arrivé des unités `rem` a permit de régler le problème de la composition, `rem` est une unité dynamique mais elle fait appel à la taille de police relatives à l'élément `<html>` (root)
+  
 
 https://codepen.io/alyra/pen/VweZJzR
 
