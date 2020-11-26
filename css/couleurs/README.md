@@ -165,9 +165,10 @@ div {
 Vous pouvez trouver plus de détails et exemples sur [MDN](https://developer.mozilla.org/fr/docs/Web/CSS/background).
 
 
+### Playgrounds :
 
-[Playground - background-size/backgroun-repeat/background-position](https://codepen.io/alyra/debug/ExPxpyw)
-[Playground - linear-gradient](https://codepen.io/alyra/debug/bGEdmMM)
+- [background-size/backgroun-repeat/background-position](https://codepen.io/alyra/debug/ExPxpyw)
+- [linear-gradient](https://codepen.io/alyra/debug/bGEdmMM)
 
 ## Exercices
 
