@@ -30,7 +30,7 @@ https://codepen.io/alyra/pen/eYJOaOO
 
 Dans notre déclaration de `font-family`, juste avant la famille générique, nous listons souvent des polices qui sont installées chez la majorité des utilisateurs. Vous trouverez la liste des polices *safe for the web* avec les statistiques les concernant sur [Web-safe Fonts](https://www.cssfontstack.com/
 
-### font-weight
+## font-weight
 
 La propriété `font-weight` permet de définir la graisse utilisée pour le texte. Les niveaux de graisse disponibles dépendent de la police. Il existe des polices disponible avec plusieurs niveaux de graisse, et des possible avec une seule variante.
 
@@ -51,7 +51,7 @@ Si la graisse demandée n'est pas disponible pour la police, le navigateur proc�
 
 
 
-#### font-style
+## font-style
 
 italic, normal
 
