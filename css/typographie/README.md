@@ -48,7 +48,7 @@ header p {
 - `lighter` - on diminue la graisse d'un niveau par rapport à l'élément parent (selon les fontes / graisses disponibles pour la police utilisée)
 - `bolder` - on augemente la graisse d'un niveau par rapport à l'élément parent (selon les fontes / graisses disponibles pour la police utilisée)
 
-Si la graisse demandée n'est pas disponible pour la police, le navigateur procède à une conversion. Vous pouvez trouvez les règles de cette conversion ainsi que des détails de mise en place `font-weight: lighter` et `font-weight: bolder` dans [cet article sur MDN](https://developer.mozilla.org/fr/docs/Web/CSS/font-weight)
+Si la graisse demandée n'est pas disponible, le navigateur procède à une conversion. Vous pouvez trouvez les règles de cette conversion ainsi que des détails de mise en place `font-weight: lighter` et `font-weight: bolder` dans [cet article sur MDN](https://developer.mozilla.org/fr/docs/Web/CSS/font-weight)
 
 
 
@@ -131,6 +131,28 @@ https://codepen.io/alyra/pen/VweZJzR
 `text-decoration` (`none`, `underline`, `overline`, `line-through`)  
 `text-align` - alignement au sein d'un élément block (`left`, `right`, `center`, `justify`)  
 `line-height` - définit la hauteur de la boîte d'une ligne. Je vous recommande d'utiliser les valeur numériques (facteur multiplicateur de la taille de fonte utilisée). Pour la bonne lisibilité `line-height` devrait être comprise entre `1.3` et `2`.
+
+## Utilisation de Google Fonts
+
+Les services de polices en ligne stockent et servent des polices avec le code CSS associé permettant leur intégration par le navigateur (les déclarations @font-face). [Google Fonts](https://fonts.google.com/) est un service de ce type, et en plus c'est un service gratuit. Comment utiliser Google fonts :
+
+1. Choisissez vos polices, copiez le code indiqué par le service et collez le dans la partie `head` de votre document HTML. Par exemple
+
+```html
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+```
+2. Ensuite vous pouvez utiliser cette police dans votre feuille de style :
+
+```css
+h1, h2, h3, h4 {
+  font-family: "Nerko One", cursive;
+}
+```
+
+Si vous cherchez des police avec un caractère particulier, vous pouvez vous servir du site [goofonts.com](https://goofonts.com) qui permet de faire une recherche par "tag".
+
+[![](https://wptemplates.pehaa.com/assets/alyra/goofonts.png)](https://goofonts.com)
 
 ---
 
