@@ -141,7 +141,32 @@ Il existe des normes qui définissent les valeur correctes pour le contraste, ai
 
 ## Propriété `background`
 
-[Playground - size/repeat/position](https://codepen.io/alyra/debug/ExPxpyw)
+La propriété  `background` est un raccourci qui regroupe des propriétés liées à la gestion des arrière-plans d'un élément (couleur, image, origine, taille, répétition, etc.)
+
+```css
+div {
+  background: red;
+/*
+  background-color: red;
+*/
+}
+```
+
+```css
+div {
+  background: red url("mon-image.png);
+/*
+  background-color: red;
+  background-image: url("mon-image.png);
+*/
+}
+```
+
+Vous pouvez trouver plus de détails et exemples sur [MDN](https://developer.mozilla.org/fr/docs/Web/CSS/background).
+
+
+
+[Playground - background-size/backgroun-repeat/background-position](https://codepen.io/alyra/debug/ExPxpyw)
 [Playground - linear-gradient](https://codepen.io/alyra/debug/bGEdmMM)
 
 ## Exercices
