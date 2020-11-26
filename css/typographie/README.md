@@ -28,9 +28,9 @@ Dans l'exemple ci-dessus, le navigateur va essayer d'appliquer la police "Open S
 
 https://codepen.io/alyra/pen/eYJOaOO
 
-Dans notre déclaration de `font-family`, juste avant la famille générique, nous listons souvent des polices qui sont installées chez la majorité des utilisateurs. Vous trouverez la liste des polices *safe for the web* avec les statistiques les concernant sur [Web-safe Fonts](https://www.cssfontstack.com/
+Dans notre déclaration de `font-family`, juste avant la famille générique, nous listons souvent des polices qui sont installées chez la majorité des utilisateurs. Vous trouverez la liste des polices *safe for the web* avec les statistiques les concernant sur [Web-safe Fonts](https://www.cssfontstack.com/)
 
-## font-weight
+## `font-weight`
 
 La propriété `font-weight` permet de définir la graisse utilisée pour le texte. Les niveaux de graisse disponibles dépendent de la police. Il existe des polices disponible avec plusieurs niveaux de graisse, et des possible avec une seule variante.
 
@@ -40,7 +40,8 @@ header p {
 }
 ```
 
-La valeur de `font-weight` peut être :
+**Les valeurs de `font-weight` :**
+
 - `normal` - équivalent à la valeur  numérique de 400
 - `bold` - texte est en gras, équivalent à la valeur numérique de 700
 - numérique - selon l'ancien spécification 100, 200, 300, 400, 500, 600, 700, 800 ou 900. Selon la nouvelle spécification une valeur comprise entre 1 et 1000
@@ -51,9 +52,9 @@ Si la graisse demandée n'est pas disponible pour la police, le navigateur proc�
 
 
 
-## font-style
+## `font-style`
 
-italic, normal
+La propriété `font-style` définit si la police devrait utiliser la fonte normale (`normal`), italique (`italic`) ou oblique (`oblique`)
 
 ```
 header p {
@@ -61,7 +62,15 @@ header p {
 }
 ```
 
-#### font-size
+**Les valeurs de `font-style`**
+- `normal`
+- `italic` - une police qualifiée d'italic, s'il n'y a pas de version italique, une version oblique sera sélectionnée à la place.
+- `oblique` - une police qualifiée d'oblique, s'il n'y a pas de version oblique, une version italic sera sélectionnée à la place. 
+- `oblique <angle>` - une police qualifiée d'oblique avec un angle pour la pente du texte spécifié  (très rarement utilisée)
+
+Dans chaque de cas, si aucune police oblique n'est disponible, le navigateur synthétisera une police penchée en tournant les caractères d'une fonte normale.
+
+## font-size
 
 `px`, `em`, `rem`
 
