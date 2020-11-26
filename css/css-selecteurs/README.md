@@ -1,8 +1,15 @@
-# Selecteurs CSS
+# Sélecteurs CSS
 
-Pouc commencer, ce matin, on vous offre un petit déjeuner, [commandez tout ce qui vous plaît.](https://css-cantine.netlify.app/)
+Bien sélectionner les éléments pour changer leurs propriétés CSS est une partie importante de notre apprentissage. 
 
-Nous pouvons tester les nouveaux type de sélecteurs [ici](https://codepen.io/alyra/pen/OJMyLoz)
+
+## Différents type de sélecteurs et comment les combiner ?
+
+Pour commencer, ce matin, on vous offre un petit déjeuner, [commandez tout ce qui vous plaît.](https://css-cantine.netlify.app/)
+
+[![css cantine](https://wptemplates.pehaa.com/assets/alyra/css-cantine.png)](https://css-cantine.netlify.app/)
+
+Nous allons aussi utiliser le pen ci-dessous pour jouer avec des sélecteurs :
 
 https://codepen.io/alyra/pen/OJMyLoz
 
@@ -60,6 +67,8 @@ https://codepen.io/alyra/pen/OJMyLoz
   <li><code>:left { }</code></li>
   <li style="color:orange">...et ce toujours pas tout...</li>
 </ul>
+
+
 
 https://codepen.io/alyra/pen/RwrrpBO
 
