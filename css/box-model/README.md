@@ -211,11 +211,15 @@ Avec `box-sizing: content-box;`, les propriétés `width` et `height` affectées
 
 [Playground](https://cdpn.io/alyra/debug/416abba364963b2efce1b467ed776f87)
 
+Nous pouvons changer la valeur de `box-sizing` pour `border-box`. Pour l'appliquer pour tous les éléments nous allons utiliser le sélecteur universel (`*`) comme ceci :
+
 ```css
 * {
   box-sizing: border-box;
 }
 ```
+
+ou comme cela :
 
 ```css
 html {
@@ -227,5 +231,4 @@ html {
   box-sizing: inherit;
 }
 ```
-
 
