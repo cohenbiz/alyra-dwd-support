@@ -128,8 +128,12 @@ https://codepen.io/alyra/pen/VweZJzR
 
 ## Autres propriétés typographiques:
 
-`text-decoration`  
-`text-align` - alignement au sein d'un élément block  
-`line-height`
+`text-decoration` (`none`, `underline`, `overline`, `line-through`)  
+`text-align` - alignement au sein d'un élément block (`left`, `right`, `center`, `justify`)  
+`line-height` - définit la hauteur de la boîte d'une ligne. Je vous recommande d'utiliser les valeur numériques (facteur multiplicateur de la taille de fonte utilisée). Pour la bonne lisibilité `line-height` devrait être comprise entre `1.3` et `2`.
+
+---
+
+## Exercices
 
 - [Wanted Dead or Alive - Google Fonts](https://codesandbox.io/s/police-rxtme?file=/index.html) | [solution](https://codepen.io/alyra/pen/6eba070d53ff9fa1f9b0952d6ace935f)
