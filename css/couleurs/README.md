@@ -52,7 +52,7 @@ p {
 }
 ```
 
-## Format code hexadecimal
+## Format hexadecimal (#)
 
 Le format **hexadecimal** fonctionne comme le format `rgb`, il regroupe des intensités du rouge, vert et bleu mais representés en système hexadécimal.
 
@@ -62,8 +62,14 @@ Vous pouvez en lire davantage dans [cet article sur smashingmagazine.](https://w
 
 [![Le fameux Quiz du Professeur Hervé B.\*](https://wptemplates.pehaa.com/assets/alyra/quizz-rvb.png)](https://cdpn.io/alyra/debug/616e97467780239fc8927073fe284ec5)
 
-- **hsl, hsla** Teinte h (hue), Saturation s, Luminosité (l)  
-  [HSL Color Picker par Marton Borbely](https://codepen.io/HunorMarton/full/dvXVvQ)
+## Format `hsl` et `hsla` 
+
+Le format couleur HSL, répresente une couleur pas ses : 
+- teinte `h` (hue)
+- saturation `s`
+- clarté `l` (lightness)
+
+[HSL Color Picker par Marton Borbely](https://codepen.io/HunorMarton/full/dvXVvQ)
 
 Le format `hsl` est particulierement pratique pour gérér :
 
@@ -116,10 +122,20 @@ color: hsl(44, 76%, 55%);
 color: hsl(74, 76%, 55%);
 ```
 
-[HSL en action - 1](https://codepen.io/alyra/pen/RwrPBxB)
+https://codepen.io/alyra/pen/RwrPBxB
+
 [HSL en action](https://cdpn.io/alyra/debug/LYpoYPY)
 
-C'est déjà pas mal, et pourtant - des nouvelles couleurs arrivent - pour l'instant uniquement dans le navigateur Safari [CodePen](https://codepen.io/cssgrid/pen/KKpLBom)
+## Nouvelles format coleurs
+
+Des nouvelles couleurs arrivent - pour l'instant uniquement dans le navigateur Safari [CodePen](https://codepen.io/cssgrid/pen/KKpLBom)
+Nous allons pas les utiliser mais vous pouvez [en lire ici](https://webkit.org/blog/10042/wide-gamut-color-in-css-with-display-p3/)
+
+## Contrast checker - Web Accessibility in Mind
+
+Vous savez maintenant comment référencer les couleurs. Par contre pas toutes les couleurs fonctionnent bien ensemble. Le problème principale ici est le contraste entre la couleur du fond (`background-color`) et la couleur du texte (`color`). Le contraste trop bas rend notre contenu illisible. 
+
+Il existe des normes qui définissent les valeur correctes pour le contraste, ainsi que des outils qui calcule et valide le contaste. 
 
 [Contrast checker](https://webaim.org/resources/contrastchecker/)
 
