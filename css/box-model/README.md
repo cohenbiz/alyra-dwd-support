@@ -72,7 +72,7 @@ https://codepen.io/alyra/pen/XWXWRXJ
 
 ### `border`
 
-- `border` - une propriété raccourcie qui permet de la bordure sa largeur avec `border-width`, son style `border-style` (`solid`, `dashed`, `pointed`) et sa couleur `border-color`.  
+- `border` - une propriété raccourcie qui permet de la bordure sa largeur avec `border-width`, son style `border-style` (`solid`, `dashed`, `dotted`, ...) et sa couleur `border-color`.  
 Il existe aussi `border-top` (`border-top-width`, `border-top-style`, `border-top-color`), `border-right`, `border-bottom` et `border-left`.
 
 ```css
