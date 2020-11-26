@@ -139,7 +139,7 @@ Il existe des normes qui définissent les valeur correctes pour le contraste, ai
 
 [Contrast checker](https://webaim.org/resources/contrastchecker/)
 
-## Background
+## Propriété `background`
 
 [Playground - size/repeat/position](https://codepen.io/alyra/debug/ExPxpyw)
 [Playground - linear-gradient](https://codepen.io/alyra/debug/bGEdmMM)
