@@ -25,7 +25,7 @@ La première possibilité est d'utiliser le nom de la couleur [keyword](https://
 
 De cette façon nous pouvons décrire **147** couleurs différentes, sans compter `transparent` et `currentColor`. Voici un autre [site que les présente](http://www.colors.commutercreative.com/)).
 
-De cette façon, nous sommes capables de référencer une minime partie des couleurs qui peuvent être affichées sur l'écran. Et si nous voulons aller au-déla ?
+De cette façon, nous sommes capables de référencer une minime partie des couleurs qui peuvent être affichées sur l'écran. Et si nous voulons aller au-delà ?
 
 ## Anatomie de la couleur
 
@@ -35,7 +35,7 @@ Pour contrôler la couleur de chaque pixel sur l'écran, le système d'exploitat
 
 Sur les premiers écrans en noir et blanc, pixel est allumé (1) ou éteint (0), un seul morceau de mémoire est affecté à chaque pixel - un bit de memoire.
 
-Sur les écrans modernes 8 bits de mémoire sont affectés pour chaque couleurs (rouge, verte et bleue). Cela donne 2<sup>8</sup> = **256** valueurs possibles pour la couleur rouge, **256** pour la couleur verte et **256** pour la bleue, donc:
+Sur les écrans modernes 8 bits de mémoire sont affectés pour chaque couleurs (rouge, verte et bleue). Cela donne 2<sup>8</sup> = **256** valeurs possibles pour la couleur rouge, **256** pour la couleur verte et **256** pour la bleue, donc:
 
 256 x 256 x 256 = **16 777 216** couleurs
 
@@ -54,7 +54,7 @@ p {
 
 ## Format hexadecimal (#)
 
-Le format **hexadecimal** fonctionne comme le format `rgb`, il regroupe des intensités du rouge, vert et bleu mais representés en système hexadécimal.
+Le format **hexadecimal** fonctionne comme le format `rgb`, il regroupe des intensités du rouge, vert et bleu mais représentées en système hexadécimal.
 
 Vous pouvez en lire davantage dans [cet article sur smashingmagazine.](https://www.smashingmagazine.com/2012/10/the-code-side-of-color/)
 
@@ -64,14 +64,14 @@ Vous pouvez en lire davantage dans [cet article sur smashingmagazine.](https://w
 
 ## Format `hsl` et `hsla` 
 
-Le format couleur HSL, répresente une couleur pas ses : 
+Le format couleur HSL, représente une couleur pas ses : 
 - teinte `h` (hue)
 - saturation `s`
 - clarté `l` (lightness)
 
 [HSL Color Picker par Marton Borbely](https://codepen.io/HunorMarton/full/dvXVvQ)
 
-Le format `hsl` est particulierement pratique pour gérér :
+Le format `hsl` est particulièrement pratique pour gérer :
 
 - les nuances et ombres (**juste le 3e paramètre change**):
 
@@ -86,7 +86,7 @@ background-color: hsl(14, 76%, 75%);
 background-color: hsl(14, 76%, 35%);
 ```
 
-- couleurs complémentaires (ajoter 180 - demi-tour au 1e paramètre):
+- couleurs complémentaires (ajouter 180 - demi-tour au 1e paramètre):
 
 ```
 /* Teinte de base */
@@ -126,7 +126,7 @@ https://codepen.io/alyra/pen/RwrPBxB
 
 [HSL en action](https://cdpn.io/alyra/debug/LYpoYPY)
 
-## Nouvelles format coleurs
+## Nouvelles format couleurs
 
 Des nouvelles couleurs arrivent - pour l'instant uniquement dans le navigateur Safari [CodePen](https://codepen.io/cssgrid/pen/KKpLBom)
 Nous allons pas les utiliser mais vous pouvez [en lire ici](https://webkit.org/blog/10042/wide-gamut-color-in-css-with-display-p3/)
@@ -135,7 +135,7 @@ Nous allons pas les utiliser mais vous pouvez [en lire ici](https://webkit.org/b
 
 Vous savez maintenant comment référencer les couleurs. Par contre pas toutes les couleurs fonctionnent bien ensemble. Le problème principale ici est le contraste entre la couleur du fond (`background-color`) et la couleur du texte (`color`). Le contraste trop bas rend notre contenu illisible. 
 
-Il existe des normes qui définissent les valeur correctes pour le contraste, ainsi que des outils qui calcule et valide le contaste. 
+Il existe des normes qui définissent les valeur correctes pour le contraste, ainsi que des outils qui calcule et valide le contraste. 
 
 [Contrast checker](https://webaim.org/resources/contrastchecker/)
 
@@ -167,7 +167,7 @@ Vous pouvez trouver plus de détails et exemples sur [MDN](https://developer.moz
 
 ### Playgrounds :
 
-- [background-size/backgroun-repeat/background-position](https://codepen.io/alyra/debug/ExPxpyw)
+- [background-size/background-repeat/background-position](https://codepen.io/alyra/debug/ExPxpyw)
 - [linear-gradient](https://codepen.io/alyra/debug/bGEdmMM)
 
 ## Exercices
