@@ -86,7 +86,7 @@ La propriété `font-size` définit la taille de fonte utilisée pour le texte. 
   
 ### `px`
 
-`px` - souvent utilisé, pourtant l'utilisation des pixels pour la taille de police n'est pas le meilleur choix, et nous allons abondonner cette approche. Utilisation de pixels ne permet pas aux navigateurs d'appliquer des réglages utilisateur concernant la taille des polices.
+`px` - souvent utilisé, pourtant l'utilisation des pixels pour la taille de police n'est pas le meilleur choix, et nous allons abondonner cette approche. Utilisation de pixels ne permet pas aux navigateurs d'appliquer des réglages utilisateur concernant la taille des polices - ceci est illustré dans la video co-dessous.
   
   https://wptemplates.pehaa.com/assets/alyra/px-vs-rem-em.mp4
  
@@ -109,11 +109,10 @@ La propriété `font-size` définit la taille de fonte utilisée pour le texte. 
   
   https://codepen.io/alyra/pen/vYXYyRz
   
-### `rem`
+### 🤩 `rem` 🥳
 
-`rem` - 🤩🥳 - l'arrivé des unités `rem` a permit de régler le problème de la composition, `rem` est une unité dynamique mais elle fait appel à la taille de police relatives à l'élément `<html>` (root)
+`rem` - l'arrivé des unités `rem` a permit de régler le problème de la composition, `rem` est une unité dynamique mais la taille de police est relative à l'élément `<html>` (root)
   
-
 https://codepen.io/alyra/pen/VweZJzR
 
 #### autres propriétés :
