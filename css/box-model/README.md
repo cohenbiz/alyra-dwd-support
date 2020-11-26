@@ -8,7 +8,12 @@ Les quatres  propriétés `width`, `height`, `padding` et `border` agissent dire
 
 - `width` - la largeur de la boîte, par défaut, sa valeur est `auto`, en lire plus sur [MDN](https://developer.mozilla.org/fr/docs/Web/CSS/width)
 - `height`- la hauteur de la boîte, par défaut, sa valeur est `auto`, en lire plus sur [MDN](https://developer.mozilla.org/fr/docs/Web/CSS/height)
-- `padding` - raccourcie pour `padding-top` 👆, `padding-right` 👉, `padding-bottom` 👇 et `padding-left` 👈- les espacements internes dans l'élément , en lire plus sur [MDN](https://developer.mozilla.org/fr/docs/Web/CSS/padding)
+
+### `padding`
+
+`padding` - raccourcie pour `padding-top` 👆, `padding-right` 👉, `padding-bottom` 👇 et `padding-left` 👈 - les espacements (écarts) internes dans l'élément , en lire plus sur [MDN](https://developer.mozilla.org/fr/docs/Web/CSS/padding)
+
+
 
 ```css
 div {
@@ -65,20 +70,35 @@ div {
 
 https://codepen.io/alyra/pen/XWXWRXJ
 
-- `border` - une propriété raccourcie qui permet de définir les propriétés liées à la bordure `border-width`, `border-style` et `border-color`. Il existe aussi `border-top` (`border-top-width`, `border-top-style`, `border-top-color`), `border-right`, `border-bottom` et `border-left`.
+### `border`
+
+- `border` - une propriété raccourcie qui permet de la bordure sa largeur avec `border-width`, son style `border-style` (`solid`, `dashed`, `pointed`) et sa couleur `border-color`.  
+Il existe aussi `border-top` (`border-top-width`, `border-top-style`, `border-top-color`), `border-right`, `border-bottom` et `border-left`.
 
 ```css
 div {
   border: 2px solid red;
+/*
+  border-width: 2px;
+  border-style: solid;
+  border-color: red;
+*/
 }
 ```
 
 ```css
 div {
   border-bottom: 1px solid;
+/*
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+*/
 }
 ```
 
+Si couleur n'est pas spécifié, la couleur de l'élément est utilisé.
+
+### `margin`
 
 A l'occasion nous allons parler aussi de la propriété `margin` - la taille des marges sur les quatre côtés de l'élément, un raccourci pour `margin-top`, `margin-right`, `margin-bottom` et` margin-left`.
 
@@ -137,7 +157,7 @@ div {
 
 Il est important de comprendre la différence entre `margin` et `padding`
 
-https://cdpn.io/alyra/debug/NWRKLWy
+[Playground](https://cdpn.io/alyra/debug/NWRKLWy)
 
 ![""](https://wptemplates.pehaa.com/assets/alyra/margin-padding.png)
 
@@ -166,7 +186,7 @@ Le comportement d'un élément peut être modifié avec la propriété `display`
 
 https://codepen.io/alyra/pen/YzwKodK
 
-### Collapsing margins (marges fusionnées)
+## Collapsing margins (marges fusionnées)
 
 Les marges verticales (`margin-top` et `margin-bottom`) des éléments type `block` sont parfois fusionnées en une seule marge.  C'est ce qu'on appelle _collapsing margins._
 Le règle qui s'y applique est suivante :
@@ -176,12 +196,20 @@ La taille de la marge = la plus grande des deux marges fusionnées.
 Ceci concerne les situations suivantes:
 
 - des éléments voisins adjacents
-- aucun contenu séparant le parent et ses descendants
+- aucun contenu, bordure ou padding séparant le parent et ses descendants
 - bloc vides
+
+Vous pouvez en lire d'avantage sur [MDN](https://developer.mozilla.org/fr/docs/Web/CSS/Mod%C3%A8le_de_bo%C3%AEte_CSS/Fusion_des_marges)
 
 https://codepen.io/alyra/pen/QWyWprr
 
-### box-sizing
+## `box-sizing`
+
+Par défault, pour tous les éléments, la valeur de la propriété `box-sizing` est `content-box`. Qu'est-ce que ça implique pour nous ?
+
+Avec `box-sizing: content-box;`, les propriétés `width` et `height` affectées à un élément s'applique à son contenu (son `content-box`). Ni les bordures, ni les paddings ne sont pas pris en compte. Ceci n'est pas très pratique pour les dévéloppeurs qui doivent ajuster la valeurs de  `width` et `height`.
+
+[Playground](https://cdpn.io/alyra/debug/416abba364963b2efce1b467ed776f87)
 
 ```css
 * {
@@ -200,4 +228,4 @@ html {
 }
 ```
 
-[Playground](https://cdpn.io/alyra/debug/416abba364963b2efce1b467ed776f87)
+
