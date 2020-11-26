@@ -1,30 +1,35 @@
 # Couleurs 🌈
 
 CSS nous permet de colorier nos pages, en particulier avec des propriétés :  
-`background-color`, `color`, `border`, `box-shadow`, `text-shadow`
+- `background-color`
+- `color`
+- `border`
+- `box-shadow`
+- `text-shadow`
 
-Il y a plusieur possibilité pour décrire une couleur. Voici juste quelques possibilités de décrire la même nuance du rouge:
-`red`,  
-`#ff0000`,  
-`#f00`,  
-`rgb(255, 0, 0)`,  
-`rgba(255, 0, 0, 0)`,  
-`rgb(100%, 0, 0)`,  
-`hsl(0, 100%, 50%)`
+Il y a plusieurs possibilités pour décrire une couleur. Voici quelques exemples pour de décrire la même nuance du rouge:
+
+- `red`  
+- `#ff0000` 
+- `#f00`  
+- `rgb(255, 0, 0)`  
+- `rgba(255, 0, 0, 0)`  
+- `rgb(100%, 0, 0)`  
+- `hsl(0, 100%, 50%)`
 
 Nous allons maintenant déchiffrer tout cela.
 
-1. La première possibilité est d'utiliser le nom de la couleur [keyword](https://developer.mozilla.org/fr/docs/Web/CSS/Type_color#Les_mots-cl%C3%A9s) (mot-clé) : `red`, `black`, `tomato`, `cornflowerblue`, ...., `transparent` et `currentColor`.
+## Couleurs par mot-clé
 
-De cette façon nous pouvons décrire **147** couleurs différentes, sans compter `transparent` et `currentColor`
+La première possibilité est d'utiliser le nom de la couleur [keyword](https://developer.mozilla.org/fr/docs/Web/CSS/Type_color#Les_mots-cl%C3%A9s) (mot-clé) : `red`, `black`, `tomato`, `cornflowerblue`, ...., `transparent` et `currentColor`.
 
-(voici un autre [site que les présente](http://www.colors.commutercreative.com/)).
+De cette façon nous pouvons décrire **147** couleurs différentes, sans compter `transparent` et `currentColor`. Voici un autre [site que les présente](http://www.colors.commutercreative.com/)).
 
-Et si nous voulons aller au-déla ?
+De cette façon, nous sommes capables de référencer une minime partie des couleurs qui peuvent être affichées sur l'écran. Et si nous voulons aller au-déla ?
 
-Chaque pixel sur l'écran est composé de trois petits points appelés luminophores entourés d'un masque noir.
+## Anatomie de la couleur
 
-Les trois luminophores distincts produisent respectivement de la lumière <span style="color:red;">rouge</span>, <span style="color:lime">verte</span> et <span style="color:blue;">bleue.</span>
+Chaque pixel sur l'écran est composé de trois petits points appelés luminophores entourés d'un masque noir. Les trois luminophores distincts produisent respectivement de la lumière <span style="color:red;">rouge</span>, <span style="color:lime">verte</span> et <span style="color:blue;">bleue.</span>
 
 Pour contrôler la couleur de chaque pixel sur l'écran, le système d'exploitation consacre une quantité de mémoire à chaque pixel.
 
@@ -34,7 +39,9 @@ Sur les écrans modernes 8 bits de mémoire sont affectés pour chaque couleurs 
 
 256 x 256 x 256 = **16 777 216** couleurs
 
-- **rgb, rgba** (intensité du rouge (r), vert (g) et b (bleu) + opacité a (alpha)
+## Format `rgb` et `rgba`
+
+**rgb, rgba**  décrit des intensités du rouge (r), vert (g) et b (bleu) + opacité a (alpha)
 
 [Playground - Couleurs RGB expliquées](https://cdpn.io/alyra/debug/b2c543699a8868342fb23ac6c9f6f73d)
 
@@ -45,7 +52,13 @@ p {
 }
 ```
 
-- **code hexadecimal** (pareil que rgb, rgba mais en utilisant le système hexadécimal)
+## Format code hexadecimal
+
+Le format **hexadecimal** fonctionne comme le format `rgb`, il regroupe des intensités du rouge, vert et bleu mais representés en système hexadécimal.
+
+Vous pouvez en lire davantage dans [cet article sur smashingmagazine.](https://www.smashingmagazine.com/2012/10/the-code-side-of-color/)
+
+![""](https://wptemplates.pehaa.com/assets/alyra/rgbtohex.png)
 
 [Le fameux Quiz du Professeur Hervé B.\*](https://cdpn.io/alyra/debug/616e97467780239fc8927073fe284ec5)
 
