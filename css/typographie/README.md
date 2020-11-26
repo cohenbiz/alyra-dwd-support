@@ -72,7 +72,22 @@ Dans chaque de cas, si aucune police oblique n'est disponible, le navigateur syn
 
 ## font-size
 
-`px`, `em`, `rem`
+La propriété `font-size` définit la taille de fonte utilisée pour le texte. La propriété font-size peut être définie de deux façons :
+
+- (rarement) comme un mot-clé désignant une taille absolue ou une taille relative (`xx-small`, `x-small`, `small`, `medium`, `large`, `x-large`, `xx-large`)
+- (parfois) <percentage> - les valeurs exprimées en pourcentages (`%`) sont proportionnelles à la taille de fonte de l'élément parent
+  
+  ```css
+  small {
+    font-size: 75%;
+  }
+  ```
+- (très souvent) comme une valeur de type <length>
+  
+  `px` - souvent utilisé. Pourtant l'utilisation des pixels pour la taille de police n'est pas le meilleur choix, et nous allons abondonner cette approche. Utilisation de pixels ne permet pas aux navigateurs d'appliquer des réglages utilisateur concernant la taille des polices.
+  
+
+
 
 https://codepen.io/alyra/pen/VweZJzR
 
