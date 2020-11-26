@@ -126,7 +126,7 @@ La propriété `font-size` définit la taille de fonte utilisée pour le texte. 
   
 https://codepen.io/alyra/pen/VweZJzR
 
-#### autres propriétés :
+## Autres propriétés typographiques:
 
 `text-decoration`  
 `text-align` - alignement au sein d'un élément block  
