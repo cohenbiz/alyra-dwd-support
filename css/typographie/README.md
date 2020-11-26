@@ -112,6 +112,17 @@ La propriété `font-size` définit la taille de fonte utilisée pour le texte. 
 ### 🤩 `rem` 🥳
 
 `rem` - l'arrivé des unités `rem` a permit de régler le problème de la composition, `rem` est une unité dynamique mais la taille de police est relative à l'élément `<html>` (root)
+
+  ```css
+  h2 {
+    font-size: 2rem;
+    /* 2 * 16px = 32px */
+  }
+  h2 span {
+    font-size: 1.5rem;
+    /* 1.5 * 16px = 24px */
+  }
+  ```
   
 https://codepen.io/alyra/pen/VweZJzR
 
