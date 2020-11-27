@@ -13,6 +13,8 @@ Nous allons aussi utiliser le pen ci-dessous pour jouer avec des sélecteurs :
 
 https://codepen.io/alyra/pen/OJMyLoz
 
+ainsi que [ce site qui traduit un sélecteur entrée par l'utilisateur en anglais.](https://hugogiraudel.github.io/selectors-explained/)
+
 <ul class="columns fragment fade visible current-fragment" data-fragment-index="0">
   <li class="done"><code>* { }</code></li>
   <li class="done"><code>E { }</code></li>
