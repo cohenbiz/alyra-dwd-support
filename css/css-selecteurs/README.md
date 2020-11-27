@@ -253,19 +253,21 @@ section p:last-child {
 
 ## First-of-type Pseudo-class
 
-{
-selectorName: "en anglais : First of type Pseudo-selector",
-helpTitle: "Cible l'élément qui est le premier enfant de son type",
-doThis: "Donnez moi la première assiette, svp.",
-selector: "assiette:first-of-type",
-syntax: ":first-of-type",
-examples: [
-"<strong>:first-of-type</strong> cible tous les éléments qui sont les premiers enfants de leur type.",
-"<strong>p:first-of-type</strong> cible tous les premiers paragraphes.",
-"<strong>div p:first-of-type</strong> cible tous les premiers paragraphes qui sont dans un <tag>div</tag>.",
-],
-boardMarkup: `<boite /> <assiette /> <assiette /> <assiette />`,
-},
+`:first-of-type {}`
+
+Cible les éléments qui sont les premiers enfants de leurs types
+
+```css
+section p:first-of-type {
+  font-size: 1.25rem;
+}
+```
+
+---
+
+Il existe aussi `only-child`, `nth-last-child`, `last-of-type`, `nth-of-type`, `nth-last-of-type`, `only-of-type`
+
+---
 
 {
 doThis: "Moi, je vais prendre des mini donuts, svp.",
@@ -281,50 +283,6 @@ examples: [
 boardMarkup: ` <toast/> <toast class="mini"/> <boite> <donut class="mini"/> </boite> <assiette> <donut/> </assiette> <assiette> <donut class="mini"/> </assiette>`,
 },
 
-{
-selectorName: "en anglais : nth Child Pseudo-selector",
-helpTitle:
-"Cible l'élément qui est l'enfant numéro ... de son élément parent",
-doThis: "Je prendrai bien la 3e assiette, svp.",
-selector: "assiette:nth-child(3)",
-syntax: ":nth-child(..)",
-examples: [
-"<strong>:nth-child(2)</strong> cible tous les éléments qui sont les 2e enfants de leur parent.",
-"<strong>p:nth-child(2)</strong> cible tous les paragraphes qui sont les 2e enfants de leur parent.",
-"<strong>div p:nth-child(2)</strong> cible tous les paragraphes qui sont les 2e enfants d'un <tag>div</tag>.",
-"<strong>:nth-child(2n)</strong> cible tous les éléments qui sont les enfants pairs de leur parent.",
-"<strong>:nth-child(2n+1)</strong> cible tous les éléments qui sont les enfants impairs de leur parent.",
-"<strong>:nth-child(3n+1)</strong> cible tous les éléments qui sont les enfants numéro 1, 4, 7, 10, 13, ... de leur parent.",
-],
-boardMarkup: `<assiette /> <assiette /> <assiette /> <assiette /> <assiette />`,
-},
-
-{
-selectorName: "en anglais : First of type Pseudo-selector",
-helpTitle: "Cible l'élément qui est le premier enfant de son type",
-doThis: "Donnez moi la première assiette, svp.",
-selector: "assiette:first-of-type",
-syntax: ":first-of-type",
-examples: [
-"<strong>:first-of-type</strong> cible tous les éléments qui sont les premiers enfants de leur type.",
-"<strong>p:first-of-type</strong> cible tous les premiers paragraphes.",
-"<strong>div p:first-of-type</strong> cible tous les premiers paragraphes qui sont dans un <tag>div</tag>.",
-],
-boardMarkup: `<boite /> <assiette /> <assiette /> <assiette />`,
-},
-{
-selectorName: "en anglais : First of type Pseudo-selector",
-helpTitle: "Cible l'élément qui est le premier enfant de son type",
-doThis: "Donnez moi la première assiette et la première boite, svp.",
-selector: ":first-of-type",
-syntax: ":first-of-type",
-examples: [
-"<strong>:first-of-type</strong> cible tous les éléments qui sont les premiers enfants de leur type.",
-"<strong>p:first-of-type</strong> cible tous les premiers paragraphes.",
-"<strong>div p:first-of-type</strong> cible tous les premiers paragraphes qui sont dans un <tag>div</tag>.",
-],
-boardMarkup: `<boite /> <boite /> <assiette /> <assiette /> <boite /> <assiette />`,
-},
 {
 doThis: "Donuts, mais pas les petits, svp...",
 selector: "donut:not(.mini)",
