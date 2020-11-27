@@ -84,11 +84,11 @@ selector: "[lang='fr']",
 
 ## Attribute selector
 
-`[attr] {}`,
-`[attr=value] {}`,
-`[attr*=value] {}`,
-`[attr^=value] {}`,
-`[attr$=value] {}`,
+`[attr] {}`,  
+`[attr=value] {}`,  
+`[attr*=value] {}`,  
+`[attr^=value] {}`,  
+`[attr$=value] {}`,  
 `[attr~=value] {}`
 
 En français _sélecteur d'attribut._ C'est un sélecteur simple.
@@ -111,6 +111,10 @@ En français _sélecteur d'attribut._ C'est un sélecteur simple.
 </dl>
 
 ```css
+[lang="en"] {
+  font-family: italic;
+}
+
 a[href^="#"] {
   background-color: gold;
 }
@@ -131,49 +135,138 @@ En français : le combinateur de descendance. Permet de combiner deux sélecteur
 `A B` cible des éléments qui correspondent au sélecteur `B` uniquement si ceux-ci ont un élément ancêtre qui correspond au premier sélecteur (`A`).
 Attention à l'espace entre deux éléments.
 
+```css
+header p {
+  font-weight: bold;
+}
+```
+
 ---
 
+## Selector list (,)
+
+`A, B {}`
+
+Cibler en même temps les éléments `A` et `B`. On peut ainsi combiner plusieurs types de sélecteurs et en avoir plus de deux.
+
+```css
+h1,
+h2,
+h3,
+.heading {
+  font-family: Montserrat, sans-serif;
+  font-weight: 900;
 }
+```
 
-var levels = [
-{
-doThis: "Je prends des assiettes, svp !",
-selector: "assiette",
-...description.type,
-boardMarkup: `<assiette/> <assiette/>`,
-},
-{
-doThis: ".. et aussi 2 boîtes à emporter, svp...",
-selector: "boite",
-...description.type,
-boardMarkup: `<boite/> <assiette/> <boite/>`,
-},
+---
+
+## Child Selector
+
+`A > B {}`
+
+Permet de combiner des sélecteurs. Cible les éléments `B` qui sont des enfants directs des éléments `A`.
+
+```css
+header > div {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+```
+
+---
+
+## Adjacent Sibling Selector
+
+`A + B {}`
+
+Permet de combiner des sélecteurs. `A + B` cible tous les éléments `B` qui suivent directement les `A`.
+
+```css
+h2 + p {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+}
+```
+
+---
+
+## General sibling combinator"
+
+`A ~ B {}`
+
+Permet de combiner des sélecteurs. A ~ B cible tous les éléments `B` qui suivent les `A`.
+
+---
+
+## First Child Pseudo-class
+
+`:first-child {}`
+
+Cible les éléments qui sont les premiers enfants de son élément parent.
+
+```css
+li:first-child {
+  font-weight: bold;
+}
+```
+
+---
+
+## nth Child Pseudo-class
+
+`:nth-child(..) {}`
+
+Cible les éléments qui sont les enfants numéro .. de son élément parent.
+
+```css
+li:nth-child(2n + 1) {
+  background: pink;
+}
+/*
+li:nth-child(1) {
+  background: pink;
+}
+li:nth-child(3) {
+  background: pink;
+}
+li:nth-child(5) {
+  background: pink;
+}
+...
+*/
+```
+
+---
+
+## Last Child Pseudo-class
+
+`:last-child {}`
+
+Cible les éléments qui sont les derniers enfants de son élément parent.
+
+```css
+section p:last-child {
+  margin-bottom: 0;
+}
+```
+
+## First-of-type Pseudo-class
 
 {
-doThis: "Je vais prendre des 'french toasts'.",
-selector: "[lang='fr']",
-selectorName: "Attribute selector",
-helpTitle:
-"cible un élément selon la présence d'un attribut ou selon la valeur donnée d'un attribut.",
-syntax: '[attribut="value"], [attribut]',
-help:
-"En français <b>sélecteur d'attribut.</b> Les crochets <strong>[..]</strong> entoure le nom d'attribut, ou le nom et sa valeur. C'est un sélecteur simple.",
+selectorName: "en anglais : First of type Pseudo-selector",
+helpTitle: "Cible l'élément qui est le premier enfant de son type",
+doThis: "Donnez moi la première assiette, svp.",
+selector: "assiette:first-of-type",
+syntax: ":first-of-type",
 examples: [
-"<strong>[id]</strong> cible tous les éléments qui ont un attribut <code>id</id>",
-'<strong>[type="text"]</strong> cible tous les éléments qui ont un attribut <strong>type</strong> égal à "text"',
+"<strong>:first-of-type</strong> cible tous les éléments qui sont les premiers enfants de leur type.",
+"<strong>p:first-of-type</strong> cible tous les premiers paragraphes.",
+"<strong>div p:first-of-type</strong> cible tous les premiers paragraphes qui sont dans un <tag>div</tag>.",
 ],
-boardMarkup: `<toast/> <toast/> <toast lang="fr"/> <assiette> <toast lang="fr"/> </assiette> <assiette/>`,
+boardMarkup: `<boite /> <assiette /> <assiette /> <assiette />`,
 },
-{
-...description.descendant,
-selector: "assiette toast",
-boardMarkup: `<boite/> <assiette> <toast/> </assiette> <toast/>`,
-},
-{
-...description.descendant,
-selector: "#jolie cupcake",
-boardMarkup: `<boite> <donut/> </boite> <assiette id="jolie"> <cupcake/> </assiette> <assiette> <cupcake/> </assiette>`,
-},
+
 {
 doThis: "Moi, je vais prendre des mini donuts, svp.",
 selector: "donut.mini",
@@ -187,111 +280,7 @@ examples: [
 ],
 boardMarkup: ` <toast/> <toast class="mini"/> <boite> <donut class="mini"/> </boite> <assiette> <donut/> </assiette> <assiette> <donut class="mini"/> </assiette>`,
 },
-{
-doThis: "Des mini donuts, svp, mais ceux qui sont dans les boîtes.",
-selector: "boite donut.mini",
-syntax: "On se la joue",
-helpTitle: "You can do it...",
-help: "Combine tout ce que tu viens d'apprendre",
-boardMarkup: `<boite> <donut/> </boite> <donut class="mini"/> <boite> <donut class="mini"/> </boite> <boite> <toast class="mini"/> </boite> <boite> <donut class="mini"/> </boite>`,
-},
-{
-doThis: "Je peux avoir les assiettes et les boîtes, svp ?",
-selector: "assiette,boite",
-selectorName: "Selector list (,)",
-helpTitle: "Liste différents sélecteurs avec des virgules...!",
-syntax: "A, B",
-help:
-"ceci permet de cibler en même temps les éléments <strong>A</strong> et <strong>B</strong>. On peut ainsi combiner plusieurs types de sélecteurs et en avoir plus de deux.",
-examples: [
-'<strong>p, .fun</strong> cible tous les paragraphes et tous les éléments avec la classe <strong>class="fun"</strong>',
-"<strong>a, p, div</strong> cible tous les liens, paragraphes et divs",
-],
-boardMarkup: `<cupcake class="mini"/> <cupcake/> <assiette> </assiette> <boite> </boite> <assiette> </assiette> <cupcake/> <cupcake class="mini"/>`,
-},
 
-{
-selectorName: "Child Selector",
-syntax: "A > B&nbsp;",
-doThis:
-"Je prends le toast, celui qui est posé directement sur l'assiette...",
-selector: "assiette > toast",
-helpTitle: "cible l'enfant direct d'un élément",
-help:
-"Avec le symbole <strong>></strong> on peut cibler des éléments qui sont des enfants directs d'un autre élément.",
-examples: [
-"<strong>A > B</strong> cible tous les <strong>B</strong> qui se trouvent directement dans un <strong>A</strong>",
-],
-boardMarkup: `<assiette> <boite> <toast/> </boite> </assiette> <assiette> <toast/> </assiette> <assiette/> <toast/> <toast class="mini"/>`,
-},
-{
-doThis: "... et les toasts posés juste après les assiettes.",
-selector: "assiette + toast",
-helpTitle: "cible un élément suivant",
-selectorName: "en anglais : Adjacent Sibling Selector",
-syntax: "A + B",
-help:
-"A + B cible tous les éléments <strong>B</strong> qui suivent (directement) les <strong>A</strong>.",
-examples: [
-'<strong>p + .intro</strong> cible tous les éléments avec la classe <strong>class="intro"</strong> qui suivent directement des paragraphes',
-"<strong>div + a</strong> cible tous les liens (<tag>a</tag>) qui suivent directement des <tag>div</tag>s",
-],
-boardMarkup: `<boite> <toast class="mini"/> </boite> <assiette /> <toast class="mini"/> <assiette /> <toast/> <toast class="mini"/> <toast class="mini"/>`,
-},
-{
-doThis: "... et tous les cupcakes posés après le toast.",
-selector: "toast ~ cupcake",
-helpTitle: "cible des éléments suivants",
-selectorName: "en anglais : General sibling combinator",
-syntax: "A ~ B",
-help:
-"A ~ B cible tous les éléments <strong>B</strong> qui suivent les <strong>A</strong>.",
-examples: [
-"<strong>h2 ~ p</strong> cible tous les paragraphes qui suivent h2 (et sont au sein du même élément parent)",
-],
-boardMarkup: `<boite /> <cupcake /> <toast/> <cupcake /> <cupcake class="mini"/> <cupcake />`,
-},
-{
-doThis: "... et toutes le mignardises posées après le boite.",
-selector: "boite ~ .mini",
-helpTitle: "cible des éléments suivants",
-selectorName: "en anglais : General sibling combinator",
-syntax: "A ~ B",
-help:
-"A ~ B cible tous les éléments <strong>B</strong> qui suivent les <strong>A</strong>.",
-examples: [
-"<strong>h2 ~ p</strong> cible tous les paragraphes qui suivent h2 (et sont au sein du même élément parent)",
-],
-boardMarkup: `<cupcake class="mini"/> <boite /> <cupcake class="mini" /> <toast class="mini"/> <cupcake /> <cupcake class="mini"/> <cupcake class="mini"/>`,
-},
-{
-selectorName: "en anglais : First Child Pseudo-selector",
-helpTitle:
-"cible l'élément qui est le premier enfant de son élément parent",
-doThis: "Je voudrais prendre la première assiette, svp.",
-selector: "assiette:first-child",
-syntax: ":first-child",
-examples: [
-"<strong>:first-child</strong> cible tous les éléments qui sont les premiers enfants de leur parent.",
-"<strong>p:first-child</strong> cible tous les paragraphes qui sont les premiers enfants de leur parent.",
-"<strong>div p:first-child</strong> cible tous les paragraphes qui sont les premiers enfants d'un <tag>div</tag>.",
-],
-boardMarkup: `<assiette /> <assiette /> <assiette />`,
-},
-{
-selectorName: "en anglais : Last Child Pseudo-selector",
-helpTitle:
-"Cible l'élément qui est le dernier enfant de son élément parent",
-doThis: "Et moi, la dernière, svp.",
-selector: "assiette:last-child",
-syntax: ":last-child",
-examples: [
-"<strong>:last-child</strong> cible tous les éléments qui sont les derniers enfants de leur parent.",
-"<strong>p:last-child</strong> cible tous les paragraphes qui sont les derniers enfants de leur parent.",
-"<strong>div p:last-child</strong> cible tous les paragraphes qui sont les derniers enfants d'un <tag>div</tag>.",
-],
-boardMarkup: `<assiette /> <assiette /> <assiette />`,
-},
 {
 selectorName: "en anglais : nth Child Pseudo-selector",
 helpTitle:
@@ -309,24 +298,7 @@ examples: [
 ],
 boardMarkup: `<assiette /> <assiette /> <assiette /> <assiette /> <assiette />`,
 },
-{
-selectorName: "en anglais : nth Child Pseudo-selector",
-helpTitle:
-"Cible l'élément qui est l'enfant numéro ... de son élément parent",
-doThis: "Je prendrai bien la 1e, 3e et 5e assiette, svp.",
-selector: "assiette:nth-child(2n+1)",
-syntax: ":nth-child(..)",
-examples: [
-"<strong>:nth-child(2)</strong> cible tous les éléments qui sont les 2e enfants de leur parent.",
-"<strong>p:nth-child(2)</strong> cible tous les paragraphes qui sont les 2e enfants de leur parent.",
-"<strong>div p:nth-child(2)</strong> cible tous les paragraphes qui sont les 2e enfants d'un <tag>div</tag>.",
-"<strong>:nth-child(2n)</strong> cible tous les éléments qui sont les enfants pairs de leur parent.",
-"<strong>:nth-child(2n+1)</strong> cible tous les éléments qui sont les enfants impairs de leur parent.",
-"<strong>:nth-child(3n+1)</strong> cible tous les éléments qui sont les enfants numéro 1, 4, 7, 10, 13, ... de leur parent.",
-"<strong>:nth-child(n+3)</strong> cible tous les éléments qui sont les enfants numéro 3, 4, 5, ... de leur parent.",
-],
-boardMarkup: `<assiette /> <assiette /> <assiette /> <assiette /> <assiette /> <assiette />`,
-},
+
 {
 selectorName: "en anglais : First of type Pseudo-selector",
 helpTitle: "Cible l'élément qui est le premier enfant de son type",
@@ -395,43 +367,7 @@ examples: [
 //help : 'You can combine the class selector with other selectors, like the type selector.',
 boardMarkup: ` <donut/> <donut class="mini"/> <donut/> <donut class="mini"/> <cupcake class="mini"/> <cupcake/> <donut/> <donut/>`,
 },
-{
-doThis: "Ceux-là, svp...",
-selector: "assiette donut",
-//selectorName : "",
-//helpTitle: "Combine the Class Selector",
-syntax: "Challenge 1",
-//help : 'You can combine the class selector with other selectors, like the type selector.',
-boardMarkup: ` <donut/> <donut class="mini"/> <boite> <donut class="mini"/> </boite> <assiette> <donut/> </assiette> <assiette> <donut class="mini"/> </assiette>`,
-},
-{
-doThis: "... et ceci aussi !",
-selector: "assiette donut.mini",
-//helpTitle: "Combine the Class Selector",
-syntax: "Challenge 2",
-//help : 'You can combine the class selector with other selectors, like the type selector.',
-boardMarkup: ` <donut/> <donut class="mini"/> <assiette> <toast class="mini"/> </assiette> <assiette> <donut/> </assiette> <assiette> <donut class="mini"/> </assiette>`,
-},
-{
-doThis: "Je prends les mignardises, qui sont posées sur les assiettes",
-selector: "assiette .mini",
-//helpTitle: "Combine the Class Selector",
-syntax: "Challenge 3",
-//help : 'You can combine the class selector with other selectors, like the type selector.',
-boardMarkup: ` <donut/> <donut class="mini"/> <assiette> <toast class="mini"/> </assiette> <assiette> <donut/> </assiette> <assiette> <donut class="mini"/> </assiette>`,
-},
-{
-doThis: "Ceux-ci, svp !",
-selector: "boite+cupcake",
-syntax: "Challenge 4",
-boardMarkup: `<boite/> <cupcake/> <cupcake/> <boite/> <cupcake/> <donut/> <boite> <cupcake/> </boite>`,
-},
-{
-doThis: "Et ceux-ci aussi !",
-selector: ":first-child",
-syntax: "Challenge 5",
-boardMarkup: `<toast/> <assiette> <donut class="mini" /> </assiette> <boite/> <boite> <donut/> </boite> <assiette/>`,
-},
+
 ]
 
 <ul class="columns fragment fade visible current-fragment" data-fragment-index="0">
